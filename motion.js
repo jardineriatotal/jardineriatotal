@@ -1,7 +1,7 @@
 (() => {
   "use strict";
   const root = document.documentElement;
-  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const reducedMotion = { get matches() { return root.dataset.motion === "reduced"; } };
   const loader = document.getElementById("site-loader");
   const loaderSkip = document.getElementById("loader-skip");
   const loadingTargets = [...document.querySelectorAll(".skip-link, .site-header, main, .footer, .whatsapp-float, .back-to-top")];
@@ -18,7 +18,7 @@
     const focusWasInLoader = loader.contains(document.activeElement);
     const wasLoading = root.classList.contains("is-loading");
     window.clearTimeout(window.jardineriaLoadingFallback);
-    if (wasLoading && !reducedMotion.matches) loader.classList.add("is-leaving");
+    if (wasLoading) loader.classList.add("is-leaving");
     root.classList.remove("is-loading");
     root.classList.add("site-ready");
     loadingTargets.forEach(node => { node.inert = false; node.removeAttribute("data-loading-inert"); });
@@ -30,7 +30,7 @@
       heading.setAttribute("tabindex", "-1");
       heading.focus({ preventScroll: true });
     }
-    window.setTimeout(() => { loader.hidden = true; loader.classList.remove("is-leaving"); }, reducedMotion.matches ? 0 : 420);
+    window.setTimeout(() => { loader.hidden = true; loader.classList.remove("is-leaving"); }, reducedMotion.matches ? 240 : 520);
   }
   loaderSkip.addEventListener("click", finishLoading);
   window.addEventListener("pageshow", event => { if (event.persisted) finishLoading(); });
@@ -41,7 +41,7 @@
   });
   Promise.race([heroReady, new Promise(resolve => window.setTimeout(resolve, 1800))]).then(() => {
     const elapsed = performance.now() - (window.jardineriaBootStarted || 0);
-    window.setTimeout(finishLoading, reducedMotion.matches ? 0 : Math.max(0, 450 - elapsed));
+    window.setTimeout(finishLoading, Math.max(0, 2200 - elapsed));
   });
 
   const reveals = [...document.querySelectorAll(".reveal")];
@@ -64,6 +64,31 @@
     root.classList.add("motion-enabled");
     reveals.forEach(node => revealObserver.observe(node));
   } else reveals.forEach(node => node.classList.add("is-visible"));
+
+  // Section entrances keep a short fade when reduced motion is requested.
+  // Translation and decorative sweeps remain exclusive to full motion.
+  const sectionStages = [...document.querySelectorAll("main > section:not(.hero) > .shell")];
+  if ("IntersectionObserver" in window) {
+    const sectionObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("section-entered");
+          sectionObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.025, rootMargin: "0px 0px -24px 0px" });
+    sectionStages.forEach(node => {
+      node.classList.add("section-stage");
+      if (node.getBoundingClientRect().top < window.innerHeight) node.classList.add("section-entered");
+      else sectionObserver.observe(node);
+    });
+    root.classList.add("sections-enabled");
+    document.addEventListener("focusin", event => {
+      const stage = event.target.closest?.(".section-stage");
+      if (stage) stage.classList.add("section-entered");
+    });
+    window.addEventListener("beforeprint", () => sectionStages.forEach(node => node.classList.add("section-entered")));
+  }
 
   const header = document.querySelector(".site-header");
   const progress = document.querySelector(".reading-progress span");
@@ -163,21 +188,6 @@
       lightboxImage.animate([{ opacity: 0.3, transform: "scale(.985)" }, { opacity: 1, transform: "scale(1)" }], {
         duration: 260, easing: "ease-out"
       });
-    }
-  });
-  reducedMotion.addEventListener("change", () => {
-    if (reducedMotion.matches) {
-      root.classList.remove("motion-enabled");
-      reveals.forEach(node => node.classList.add("is-visible"));
-      if (revealObserver) revealObserver.disconnect();
-      detailAnimations.forEach((animation, item) => {
-        animation.cancel();
-        item.open = item.dataset.expanded === "true";
-        item.style.height = "";
-        item.style.overflow = "";
-      });
-      detailAnimations.clear();
-      finishLoading();
     }
   });
 })();

@@ -1,6 +1,7 @@
 (() => {
   const root = document.documentElement;
   root.classList.add("js", "is-loading");
+  root.dataset.motion = "full";
   window.jardineriaBootStarted = performance.now();
   document.addEventListener("DOMContentLoaded", () => {
     if (!root.classList.contains("is-loading")) return;
@@ -12,7 +13,7 @@
   }, { once: true });
 
   window.jardineriaLoadingFallback = window.setTimeout(() => {
-    root.classList.remove("is-loading", "motion-enabled");
+    root.classList.remove("is-loading", "motion-enabled", "sections-enabled", "cinema-ready");
     root.classList.add("site-ready");
     document.querySelectorAll("[data-loading-inert]").forEach(node => {
       node.inert = false;
@@ -21,5 +22,5 @@
     document.querySelector("main")?.removeAttribute("aria-busy");
     const loader = document.getElementById("site-loader");
     if (loader) { loader.hidden = true; loader.setAttribute("aria-hidden", "true"); }
-  }, 3000);
+  }, 7000);
 })();

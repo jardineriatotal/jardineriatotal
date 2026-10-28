@@ -42,7 +42,7 @@
     const source = galleryButtons[activeImage].querySelector("img");
     lightboxImage.src = source.src;
     lightboxImage.alt = source.alt;
-    lightboxCaption.textContent = source.alt + " · Imagen de referencia";
+    lightboxCaption.textContent = source.alt + " · Jardinería Total";
     lightboxCount.textContent = (activeImage + 1) + " / " + galleryButtons.length;
   }
   galleryButtons.forEach((button, index) => button.addEventListener("click", () => {
@@ -111,7 +111,17 @@
       anchor.href = url.href;
       anchor.target = "_blank";
       anchor.rel = "noopener noreferrer";
+      anchor.className = "button button-social";
       anchor.textContent = item.text;
+      anchor.setAttribute("aria-label", "Ver Jardinería Total en " + item.text);
+      if (item.key === "instagram") {
+        const icon = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+        icon.setAttribute("aria-hidden", "true");
+        const use = document.createElementNS("http://www.w3.org/2000/svg", "use");
+        use.setAttribute("href", "#icon-instagram");
+        icon.append(use);
+        anchor.prepend(icon);
+      }
       socialContainer.append(anchor);
     } catch {}
   });
