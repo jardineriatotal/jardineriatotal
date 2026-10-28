@@ -279,3 +279,9 @@ html.cinema-ready .work-gallery .work-photo .cinema-image{transform:none!importa
 /* Third portrait comparison keeps the same draggable format. */
 .comparison-card-vereda{grid-column:1/-1;width:min(100%,500px);justify-self:center}
 .comparison-card-vereda .comparison-view{aspect-ratio:2/3}
+
+/* Calls to action at the end of project work and customer reviews. */
+.section-actions{display:flex;justify-content:center;margin-top:36px}
+.section-actions .button{max-width:100%;padding-block:15px;text-align:center;line-height:1.5}
+.section-actions .button svg,.section-actions .button>span{flex-shrink:0}
+@media(max-width:480px){.section-actions .button{width:100%;gap:12px;padding-inline:16px}}
