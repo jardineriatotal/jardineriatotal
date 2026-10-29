@@ -287,3 +287,12 @@ html.cinema-ready .work-gallery .work-photo .cinema-image{transform:none!importa
 .work-gallery .comparison-heading{display:block}
 .work-gallery .comparison-heading h3{margin-top:9px;font-size:24px}
 @media(max-width:760px){.work-gallery>.comparison-card{margin-bottom:12px}}
+
+/* Original customer review captures in equal, uncropped frames. */
+.reviews-grid.review-captures{grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.review-capture{display:flex;align-items:center;justify-content:center;aspect-ratio:5/3;min-width:0;padding:18px;background:#fff;border:1px solid #deded3;border-radius:9px;box-shadow:0 7px 24px #17382d09;overflow:hidden;transition:box-shadow .3s,border-color .3s}
+.review-capture img{display:block;width:100%;height:100%;object-fit:contain}
+.review-capture:hover{border-color:var(--olive);box-shadow:0 14px 32px #17382d17}
+.reviews-footer-captures{justify-content:flex-end}
+@media(max-width:1050px){.reviews-grid.review-captures{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.reviews-grid.review-captures{grid-template-columns:1fr;gap:16px}.review-capture{padding:14px}}
