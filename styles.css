@@ -296,3 +296,7 @@ html.cinema-ready .work-gallery .work-photo .cinema-image{transform:none!importa
 .reviews-footer-captures{justify-content:flex-end}
 @media(max-width:1050px){.reviews-grid.review-captures{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:640px){.reviews-grid.review-captures{grid-template-columns:1fr;gap:16px}.review-capture{padding:14px}}
+
+/* Show all of the new comparison photos, including mixed orientations. */
+.comparison-card-complete .comparison-view{aspect-ratio:var(--comparison-ratio,4/5)}
+.comparison-card-complete .comparison-view>img{object-fit:contain;background:#d4ddcf}
