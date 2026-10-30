@@ -300,3 +300,7 @@ html.cinema-ready .work-gallery .work-photo .cinema-image{transform:none!importa
 /* Show all of the new comparison photos, including mixed orientations. */
 .comparison-card-complete .comparison-view{aspect-ratio:var(--comparison-ratio,4/5)}
 .comparison-card-complete .comparison-view>img{object-fit:contain;background:#d4ddcf}
+
+/* Keep the fifth service centered at the same width as the other cards. */
+.service-grid-real>#servicio-grama-bahiana{grid-column:1/-1;width:calc((100% - 24px)/2);justify-self:center}
+@media(max-width:760px){.service-grid-real>#servicio-grama-bahiana{width:100%}}
