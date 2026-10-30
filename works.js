@@ -8,7 +8,7 @@
     function render() {
       const value = Math.min(100, Math.max(0, Number(range.value)));
       view.style.setProperty("--compare", value + "%");
-      range.setAttribute("aria-valuetext", value + "% de la imagen antes visible");
+      range.setAttribute("aria-valuetext", value + "% de " + (view.dataset.firstLabel || "la imagen antes") + " visible");
       beforeLabel.style.opacity = value > 8 ? "1" : "0";
       afterLabel.style.opacity = value < 92 ? "1" : "0";
     }
