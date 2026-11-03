@@ -131,12 +131,6 @@
   window.addEventListener("resize", requestScrollUpdate, { passive: true });
   updateScroll();
 
-  document.querySelectorAll("[data-service]").forEach(link => {
-    link.addEventListener("click", () => {
-      document.querySelector('#contact-form select[name="servicio"]').value = link.dataset.service;
-    });
-  });
-
   const details = [...document.querySelectorAll(".faq-list details")];
   const detailAnimations = new Map();
   function expandDetail(item, expand) {
