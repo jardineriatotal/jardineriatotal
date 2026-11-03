@@ -6,7 +6,7 @@
       "has": [
         {
           "type": "host",
-          "value": "jardineriatotalweb\\.vercel\\.app"
+          "value": "jardineriatotalweb.vercel.app"
         }
       ],
       "destination": "https://www.jardineria-total.com/:path*",
