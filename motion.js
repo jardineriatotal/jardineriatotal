@@ -177,7 +177,7 @@
   });
 
   const lightboxImage = document.getElementById("lightbox-image");
-  lightboxImage.addEventListener("load", () => {
+  lightboxImage?.addEventListener("load", () => {
     if (!reducedMotion.matches && typeof lightboxImage.animate === "function") {
       lightboxImage.animate([{ opacity: 0.3, transform: "scale(.985)" }, { opacity: 1, transform: "scale(1)" }], {
         duration: 260, easing: "ease-out"
