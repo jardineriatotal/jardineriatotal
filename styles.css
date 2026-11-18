@@ -302,5 +302,5 @@ html.cinema-ready .work-gallery .work-photo .cinema-image{transform:none!importa
 .comparison-card-complete .comparison-view>img{object-fit:contain;background:#d4ddcf}
 
 /* Keep the fifth service centered at the same width as the other cards. */
-.service-grid-real>#servicio-grama-bahiana{grid-column:1/-1;width:calc((100% - 24px)/2);justify-self:center}
-@media(max-width:760px){.service-grid-real>#servicio-grama-bahiana{width:100%}}
+.service-grid-real>.service-card:last-child{grid-column:1/-1;width:calc((100% - 24px)/2);justify-self:center}
+@media(max-width:760px){.service-grid-real>.service-card:last-child{width:100%}}
