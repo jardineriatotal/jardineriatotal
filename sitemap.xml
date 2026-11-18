@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.jardineria-total.com/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <image:image>
       <image:loc>https://www.jardineria-total.com/assets/hero-large.webp</image:loc>
     </image:image>
@@ -98,6 +98,110 @@
     </image:image>
     <image:image>
       <image:loc>https://www.jardineria-total.com/assets/trabajo-muro-verde.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.jardineria-total.com/poda-de-arboles-zona-norte-caba</loc>
+    <lastmod>2026-11-18</lastmod>
+    <image:image>
+      <image:loc>https://www.jardineria-total.com/assets/poda-despues.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.jardineria-total.com/assets/trabajo-poda-altura-trabajo.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.jardineria-total.com/assets/poda-antes.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.jardineria-total.com/riego-automatico-zona-norte-caba</loc>
+    <lastmod>2026-11-18</lastmod>
+    <image:image>
+      <image:loc>https://www.jardineria-total.com/assets/riego-automatico-aspersor.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.jardineria-total.com/assets/riego-automatico-instalacion.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.jardineria-total.com/grama-bahiana-zona-norte-caba</loc>
+    <lastmod>2026-11-18</lastmod>
+    <image:image>
+      <image:loc>https://www.jardineria-total.com/assets/cesped-colocacion.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.jardineria-total.com/assets/trabajo-cesped-palmera-despues.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.jardineria-total.com/assets/cesped-terminacion.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.jardineria-total.com/diseno-de-jardines-zona-norte-caba</loc>
+    <lastmod>2026-11-18</lastmod>
+    <image:image>
+      <image:loc>https://www.jardineria-total.com/assets/trabajo-cantero-patio-antes.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.jardineria-total.com/assets/trabajo-cantero-patio-despues.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.jardineria-total.com/assets/trabajo-jardin-vertical-despues.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.jardineria-total.com/mantenimiento-de-jardines-zona-norte-caba</loc>
+    <lastmod>2026-11-18</lastmod>
+    <image:image>
+      <image:loc>https://www.jardineria-total.com/assets/trabajo-cesped-pileta.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.jardineria-total.com/assets/trabajo-recuperacion-cesped-despues.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.jardineria-total.com/assets/trabajo-jardin-arbol-despues.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.jardineria-total.com/jardineria-en-vicente-lopez</loc>
+    <lastmod>2026-11-18</lastmod>
+    <image:image>
+      <image:loc>https://www.jardineria-total.com/assets/trabajo-cesped-pileta.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.jardineria-total.com/jardineria-en-san-isidro</loc>
+    <lastmod>2026-11-18</lastmod>
+    <image:image>
+      <image:loc>https://www.jardineria-total.com/assets/poda-despues.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.jardineria-total.com/jardineria-en-tigre</loc>
+    <lastmod>2026-11-18</lastmod>
+    <image:image>
+      <image:loc>https://www.jardineria-total.com/assets/cesped-colocacion.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.jardineria-total.com/jardineria-en-belgrano</loc>
+    <lastmod>2026-11-18</lastmod>
+    <image:image>
+      <image:loc>https://www.jardineria-total.com/assets/trabajo-cantero-patio-antes.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.jardineria-total.com/jardineria-en-palermo</loc>
+    <lastmod>2026-11-18</lastmod>
+    <image:image>
+      <image:loc>https://www.jardineria-total.com/assets/trabajo-cantero-patio-antes.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.jardineria-total.com/jardineria-en-nunez</loc>
+    <lastmod>2026-11-18</lastmod>
+    <image:image>
+      <image:loc>https://www.jardineria-total.com/assets/trabajo-cesped-pileta.webp</image:loc>
     </image:image>
   </url>
 </urlset>

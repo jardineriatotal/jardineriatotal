@@ -27,6 +27,116 @@
       "source": "/index.html",
       "destination": "https://www.jardineria-total.com/",
       "permanent": true
+    },
+    {
+      "source": "/poda-de-arboles-zona-norte-caba.html",
+      "destination": "/poda-de-arboles-zona-norte-caba",
+      "permanent": true
+    },
+    {
+      "source": "/poda-de-arboles-zona-norte-caba/",
+      "destination": "/poda-de-arboles-zona-norte-caba",
+      "permanent": true
+    },
+    {
+      "source": "/riego-automatico-zona-norte-caba.html",
+      "destination": "/riego-automatico-zona-norte-caba",
+      "permanent": true
+    },
+    {
+      "source": "/riego-automatico-zona-norte-caba/",
+      "destination": "/riego-automatico-zona-norte-caba",
+      "permanent": true
+    },
+    {
+      "source": "/grama-bahiana-zona-norte-caba.html",
+      "destination": "/grama-bahiana-zona-norte-caba",
+      "permanent": true
+    },
+    {
+      "source": "/grama-bahiana-zona-norte-caba/",
+      "destination": "/grama-bahiana-zona-norte-caba",
+      "permanent": true
+    },
+    {
+      "source": "/diseno-de-jardines-zona-norte-caba.html",
+      "destination": "/diseno-de-jardines-zona-norte-caba",
+      "permanent": true
+    },
+    {
+      "source": "/diseno-de-jardines-zona-norte-caba/",
+      "destination": "/diseno-de-jardines-zona-norte-caba",
+      "permanent": true
+    },
+    {
+      "source": "/mantenimiento-de-jardines-zona-norte-caba.html",
+      "destination": "/mantenimiento-de-jardines-zona-norte-caba",
+      "permanent": true
+    },
+    {
+      "source": "/mantenimiento-de-jardines-zona-norte-caba/",
+      "destination": "/mantenimiento-de-jardines-zona-norte-caba",
+      "permanent": true
+    },
+    {
+      "source": "/jardineria-en-vicente-lopez.html",
+      "destination": "/jardineria-en-vicente-lopez",
+      "permanent": true
+    },
+    {
+      "source": "/jardineria-en-vicente-lopez/",
+      "destination": "/jardineria-en-vicente-lopez",
+      "permanent": true
+    },
+    {
+      "source": "/jardineria-en-san-isidro.html",
+      "destination": "/jardineria-en-san-isidro",
+      "permanent": true
+    },
+    {
+      "source": "/jardineria-en-san-isidro/",
+      "destination": "/jardineria-en-san-isidro",
+      "permanent": true
+    },
+    {
+      "source": "/jardineria-en-tigre.html",
+      "destination": "/jardineria-en-tigre",
+      "permanent": true
+    },
+    {
+      "source": "/jardineria-en-tigre/",
+      "destination": "/jardineria-en-tigre",
+      "permanent": true
+    },
+    {
+      "source": "/jardineria-en-belgrano.html",
+      "destination": "/jardineria-en-belgrano",
+      "permanent": true
+    },
+    {
+      "source": "/jardineria-en-belgrano/",
+      "destination": "/jardineria-en-belgrano",
+      "permanent": true
+    },
+    {
+      "source": "/jardineria-en-palermo.html",
+      "destination": "/jardineria-en-palermo",
+      "permanent": true
+    },
+    {
+      "source": "/jardineria-en-palermo/",
+      "destination": "/jardineria-en-palermo",
+      "permanent": true
+    },
+    {
+      "source": "/jardineria-en-nunez.html",
+      "destination": "/jardineria-en-nunez",
+      "permanent": true
+    },
+    {
+      "source": "/jardineria-en-nunez/",
+      "destination": "/jardineria-en-nunez",
+      "permanent": true
     }
   ],
   "headers": [
@@ -68,6 +178,52 @@
           "value": "public, max-age=3600"
         }
       ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/poda-de-arboles-zona-norte-caba",
+      "destination": "/poda-de-arboles-zona-norte-caba.html"
+    },
+    {
+      "source": "/riego-automatico-zona-norte-caba",
+      "destination": "/riego-automatico-zona-norte-caba.html"
+    },
+    {
+      "source": "/grama-bahiana-zona-norte-caba",
+      "destination": "/grama-bahiana-zona-norte-caba.html"
+    },
+    {
+      "source": "/diseno-de-jardines-zona-norte-caba",
+      "destination": "/diseno-de-jardines-zona-norte-caba.html"
+    },
+    {
+      "source": "/mantenimiento-de-jardines-zona-norte-caba",
+      "destination": "/mantenimiento-de-jardines-zona-norte-caba.html"
+    },
+    {
+      "source": "/jardineria-en-vicente-lopez",
+      "destination": "/jardineria-en-vicente-lopez.html"
+    },
+    {
+      "source": "/jardineria-en-san-isidro",
+      "destination": "/jardineria-en-san-isidro.html"
+    },
+    {
+      "source": "/jardineria-en-tigre",
+      "destination": "/jardineria-en-tigre.html"
+    },
+    {
+      "source": "/jardineria-en-belgrano",
+      "destination": "/jardineria-en-belgrano.html"
+    },
+    {
+      "source": "/jardineria-en-palermo",
+      "destination": "/jardineria-en-palermo.html"
+    },
+    {
+      "source": "/jardineria-en-nunez",
+      "destination": "/jardineria-en-nunez.html"
     }
   ]
 }

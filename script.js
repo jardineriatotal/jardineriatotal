@@ -51,18 +51,18 @@
     lightbox.showModal();
   }));
   const closeGallery = () => { lightbox.close(); if (galleryTrigger) galleryTrigger.focus(); };
-  lightbox.querySelector(".lightbox-close").addEventListener("click", closeGallery);
-  lightbox.querySelector(".lightbox-prev").addEventListener("click", () => setGalleryImage(activeImage - 1));
-  lightbox.querySelector(".lightbox-next").addEventListener("click", () => setGalleryImage(activeImage + 1));
-  lightbox.addEventListener("click", event => { if (event.target === lightbox) closeGallery(); });
-  lightbox.addEventListener("keydown", event => {
+  lightbox?.querySelector(".lightbox-close").addEventListener("click", closeGallery);
+  lightbox?.querySelector(".lightbox-prev").addEventListener("click", () => setGalleryImage(activeImage - 1));
+  lightbox?.querySelector(".lightbox-next").addEventListener("click", () => setGalleryImage(activeImage + 1));
+  lightbox?.addEventListener("click", event => { if (event.target === lightbox) closeGallery(); });
+  lightbox?.addEventListener("keydown", event => {
     if (event.key === "ArrowLeft") setGalleryImage(activeImage - 1);
     if (event.key === "ArrowRight") setGalleryImage(activeImage + 1);
   });
 
   const form = document.getElementById("contact-form");
   const formError = document.getElementById("form-error");
-  form.addEventListener("submit", event => {
+  form?.addEventListener("submit", event => {
     event.preventDefault();
     formError.hidden = true;
     const fields = [...form.querySelectorAll("input[required], select[required], textarea[required]")];
@@ -95,7 +95,7 @@
     if (!whatsappReady) { showDemo(); return; }
     window.location.assign("https://wa.me/" + digits + "?text=" + encodeURIComponent("Hola, Jardinería Total. Quisiera hacer una consulta."));
   });
-  document.getElementById("availability-link").addEventListener("click", () => {
+  document.getElementById("availability-link")?.addEventListener("click", () => {
     window.setTimeout(() => form.elements.zona.focus({ preventScroll: true }), 450);
   });
 

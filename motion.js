@@ -112,7 +112,7 @@
     backToTop.hidden = y < 650;
     let current = "#inicio";
     sections.forEach(section => {
-      if (section.element.getBoundingClientRect().top <= window.innerHeight * 0.42) current = section.id;
+      if (section.element && section.element.getBoundingClientRect().top <= window.innerHeight * 0.42) current = section.id;
     });
     if (current !== activeId) {
       activeId = current;
