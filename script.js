@@ -30,6 +30,21 @@
     if (!nav.contains(event.target) && !menuToggle.contains(event.target)) closeMenu();
   });
 
+  function openServiceDetails() {
+    const section = document.getElementById(window.location.hash.slice(1));
+    if (!section?.classList.contains("service-detail") || section.open) return;
+    section.open = true;
+    window.requestAnimationFrame(() => section.scrollIntoView());
+  }
+
+  window.addEventListener("hashchange", openServiceDetails);
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener("click", () => {
+      if (link.hash === window.location.hash) openServiceDetails();
+    });
+  });
+  openServiceDetails();
+
   const galleryButtons = [...document.querySelectorAll("[data-gallery-index]")];
   const lightbox = document.getElementById("lightbox");
   const lightboxImage = document.getElementById("lightbox-image");

@@ -304,3 +304,57 @@ html.cinema-ready .work-gallery .work-photo .cinema-image{transform:none!importa
 /* Keep the fifth service centered at the same width as the other cards. */
 .service-grid-real>.service-card:last-child{grid-column:1/-1;width:calc((100% - 24px)/2);justify-self:center}
 @media(max-width:760px){.service-grid-real>.service-card:last-child{width:100%}}
+
+
+/* Service information uses the same colors and fonts as the service cards. */
+.service-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  align-self: flex-start;
+  margin-top: 14px;
+  color: var(--forest);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.service-more svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.8; }
+.service-details { margin-top: clamp(40px, 6vw, 78px); }
+.service-details h2 { margin-bottom: 22px; }
+.service-detail { border-bottom: 1px solid var(--line); }
+.service-detail:first-of-type { border-top: 1px solid var(--line); }
+.service-detail > summary {
+  padding: 16px 2px;
+  cursor: pointer;
+  list-style: none;
+}
+.service-detail > summary::-webkit-details-marker { display: none; }
+.service-detail summary h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin: 0;
+  font: normal clamp(18px, 3vw, 25px)/1.25 var(--serif);
+  color: var(--forest);
+}
+.service-detail summary span {
+  display: grid;
+  flex: 0 0 30px;
+  height: 30px;
+  place-items: center;
+  border: 1px solid #d3dccd;
+  border-radius: 50%;
+  font: normal 22px/1 var(--sans);
+}
+.service-detail summary span::before { content: "+"; }
+.service-detail[open] summary span::before { content: "−"; }
+.service-detail-copy { max-width: 72ch; padding: 4px 2px 26px; line-height: 1.65; }
+.service-detail-copy h4 { margin: 22px 0 8px; color: var(--forest); }
+.service-detail-copy p { margin: 0 0 14px; }
+.service-detail-copy ul, .service-detail-copy ol { margin: 0 0 14px; padding-inline-start: 24px; }
+.service-detail-copy dl { margin: 0 0 16px; }
+.service-detail-copy dt { margin-top: 12px; font-weight: 700; }
+.service-detail-copy dd { margin: 2px 0 0; }
+.service-detail-copy a:not(.button) { text-decoration: underline; text-underline-offset: 3px; }
